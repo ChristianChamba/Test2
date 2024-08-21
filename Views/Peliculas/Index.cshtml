@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Test2.Models.Pelicula>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <h1>Pruebas</h1>
+        </th>
+    </tr>
+
+@foreach (var item in ViewBag.peliculas) {
+    <tr>
+        <td>
+            @item.peli_titu |
+            @item.peli_estreno |
+            @item.peli_genero |
+            @item.peli_precio
+        </td>
+       
+    </tr>
+}
+
+</table>
